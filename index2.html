@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Koszt Karnetu</title>
+    <style>
+        body { text-align: center; font-family: Arial, sans-serif; margin-top: 50px; }
+        p { font-size: 20px; font-weight: bold; color: blue; }
+    </style>
+</head>
+<body>
+    <script>
+        function karnetSilownia() {
+            let miesiace = parseInt(prompt("Podaj liczbę miesięcy karnetu:"));
+            let cena;
+
+            if (miesiace === 1) {
+                cena = 150;
+            } else if (miesiace <= 5) {
+                cena = 130;
+            } else {
+                cena = 110;
+            }
+
+            let koszt = miesiace * cena;
+            if (miesiace >= 12) {
+                koszt -= 50;
+            }
+
+            document.write("<p>Koszt karnetu: " + koszt + " zł</p>");
+        }
+
+        karnetSilownia();
+    </script>
+</body>
+</html>
