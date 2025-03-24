@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Koszt Parkowania</title>
+    <style>
+        body { text-align: center; font-family: Arial, sans-serif; margin-top: 50px; }
+        p { font-size: 20px; font-weight: bold; color: blue; }
+    </style>
+</head>
+<body>
+    <script>
+        function kosztParkowania() {
+            let godziny = parseInt(prompt("Podaj liczbę godzin parkowania:"));
+            let cena;
+
+            if (godziny <= 2) {
+                cena = 5;
+            } else if (godziny <= 5) {
+                cena = 4;
+            } else {
+                cena = 3;
+            }
+
+            let koszt = godziny * cena;
+            if (koszt > 60) {
+                koszt = 60;
+            }
+
+            document.write("<p>Koszt parkowania: " + koszt + " zł</p>");
+        }
+
+        kosztParkowania();
+    </script>
+</body>
+</html>
